@@ -8,5 +8,6 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .settings(
     name := "parsing",
-    libraryDependencies ++= Seq(scalaTest % Test, scalacheck % Test)
-  )
+    libraryDependencies ++= Seq(scalaTest % Test, scalacheck % Test),
+    antlr4PackageName in Antlr4 := Some("sb.be.guildexercises.parsing")
+  ).enablePlugins(Antlr4Plugin)
