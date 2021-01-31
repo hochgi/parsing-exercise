@@ -8,5 +8,5 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .settings(
     name := "parsing",
-    libraryDependencies ++= Seq(scalaTest % Test, scalacheck % Test)
+    libraryDependencies ++= Seq(fastparse, scalaTest % Test, scalacheck % Test)
   )
